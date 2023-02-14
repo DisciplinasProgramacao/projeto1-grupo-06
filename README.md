@@ -4,9 +4,9 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 ## Alunos integrantes da equipe
 
+* Felipe Roberto Dutra Chaves Vieira
 * Juliana Serra Camargo Gomes
 * Luana Fleury Braz
-* Felipe Roberto Dutra Chaves Vieira
 * Victor de Souza Friche Passos
 * Vítor de Figueiredo Pereira
 
