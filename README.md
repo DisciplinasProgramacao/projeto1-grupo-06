@@ -6,7 +6,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 * Juliana Serra Camargo Gomes
 * Luana Fleury Braz
-* Philippe Roberto Dutra Chaves Vieira
+* Guilherme da Silveira Cantoni
 * Victor de Souza Friche Passos
 * Vítor de Figueiredo Pereira
 
