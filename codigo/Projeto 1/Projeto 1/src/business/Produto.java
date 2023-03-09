@@ -39,6 +39,14 @@ public class Produto {
 		return margemLucro;
 	}
 	
+	public void setValorImpostos(double valorImpostos) {
+    	this.valorImpostos = (precoCusto + margemLucro) * 0.18;
+    	}
+	
+	public double getValorImpostos() {
+		return valorImpostos;
+	}
+	
 	public void setPrecoVenda(double custo, double lucro, double impostos) {
 		this.precoVenda = precoCusto + margemLucro + valorImpostos;
 	}
