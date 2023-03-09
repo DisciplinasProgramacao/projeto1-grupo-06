@@ -37,6 +37,21 @@ class ProdutoTest {
         }
 	
 	@Test
+    	void testValorImpostos() {
+        Produto p1 = new Produto();
+        p1.setPrecoCusto(50);
+        p1.setMargemLucro(0.3);
+        p1.setValorImpostos(13.5);
+        assertEquals(9.054, p1.getValorImpostos(), 0.001);
+
+        Produto p2 = new Produto();
+        p2.setPrecoCusto(25);
+        p2.setMargemLucro(0.8);
+        p2.setValorImpostos(6.75);
+        assertEquals(4.644, p2.getValorImpostos(), 0.001);
+        }
+	
+	@Test
 	void testPrecoVenda() {
 		//Ainda nao implementei o teste porque tenho que esperar outro integrante implementar margem de lucro e valor dos impostos
 	}
