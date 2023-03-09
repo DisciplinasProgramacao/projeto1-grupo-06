@@ -2,4 +2,47 @@ package business;
 
 public class Produto {
 
+	private String descricao;
+	private double precoCusto;
+	private double precoVenda;
+	private double margemLucro;
+	private double valorImpostos;
+	
+	public String getDescricao() {
+		return descricao;
+	}
+	
+	public void setDescricao(String nomeProduto) {
+		if (nomeProduto.length() >= 3)
+			this.descricao = nomeProduto;
+	}
+	
+	public double getPrecoCusto() {
+		return precoCusto;
+	}
+	
+	public void setPrecoCusto(double custo) {
+		this.precoCusto = custo;
+	}
+	
+	public double getPrecoVenda() {
+		return precoVenda;
+	}
+	
+	public void setPrecoVenda(double custo, double lucro, double impostos) {
+		this.precoVenda = precoCusto + margemLucro + valorImpostos;
+	}
+	
+	public Produto(String descricao, double precoCusto, double margemLucro, double valorImpostos) {
+		setDescricao(descricao);
+		setPrecoCusto(precoCusto);
+		
+	}
+	
+	public Produto(){
+		descricao = "Descricao_Padrao";
+		precoCusto = 0.01f;
+		
+	}
 }
+
