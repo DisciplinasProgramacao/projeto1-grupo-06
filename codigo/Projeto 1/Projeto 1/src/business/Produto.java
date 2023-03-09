@@ -29,6 +29,16 @@ public class Produto {
 		return precoVenda;
 	}
 	
+	public void setMargemLucro(double margemLucro) {
+    	if(margemLucro >= 0.3 && margemLucro <= 0.8)
+    		this.margemLucro = margemLucro;
+    	setPrecoVenda(precoCusto, margemLucro, valorImpostos);
+       }
+    
+   	public double getMargemLucro() {
+		return margemLucro;
+	}
+	
 	public void setPrecoVenda(double custo, double lucro, double impostos) {
 		this.precoVenda = precoCusto + margemLucro + valorImpostos;
 	}
