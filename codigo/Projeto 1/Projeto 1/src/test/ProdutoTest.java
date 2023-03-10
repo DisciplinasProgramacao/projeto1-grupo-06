@@ -53,7 +53,7 @@ class ProdutoTest {
 	
 	@Test
 	void testPrecoVenda() {
-		//Ainda nao implementei o teste porque tenho que esperar outro integrante implementar margem de lucro e valor dos impostos
+		
 	}
 
 }

@@ -54,12 +54,17 @@ public class Produto {
 	public Produto(String descricao, double precoCusto, double margemLucro, double valorImpostos) {
 		setDescricao(descricao);
 		setPrecoCusto(precoCusto);
+		setValorImpostos(valorImpostos);
+		setMargemLucro(margemLucro);
+		
 		
 	}
 	
 	public Produto(){
 		descricao = "Descricao_Padrao";
 		precoCusto = 0.01f;
+		valorImpostos = 10.0;
+		margemLucro = 0.5;
 		
 	}
 }
