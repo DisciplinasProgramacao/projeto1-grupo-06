@@ -64,7 +64,7 @@ public class Produto {
 		descricao = "Descricao_Padrao";
 		precoCusto = 0.01f;
 		valorImpostos = 10.0;
-		margemLucro = 0.5;
+		margemLucro = 100;
 		
 	}
 }

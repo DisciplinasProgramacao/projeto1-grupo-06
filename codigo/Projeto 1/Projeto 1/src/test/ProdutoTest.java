@@ -53,6 +53,17 @@ class ProdutoTest {
 	
 	@Test
 	void testPrecoVenda() {
+		Produto p1 = new Produto();
+		p1.setPrecoCusto(20);
+		p1.setMargemLucro(0.3);
+		p1.setValorImpostos(10.0);
+		assertEquals(30.3,p1.getPrecoVenda());
+		
+		Produto p2 = new Produto();
+		p2.setPrecoCusto(20);
+		p2.setMargemLucro(1.0);              
+		p2.setValorImpostos(10.0);
+		assertNotSame(31,p1.getPrecoVenda());
 		
 	}
 
