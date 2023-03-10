@@ -56,7 +56,7 @@ class ProdutoTest {
 		Produto p1 = new Produto();
 		p1.setPrecoCusto(20);
 		p1.setMargemLucro(0.3);
-		p1.setValorImpostos(10.0);
+		p1.setValorImpostos(10.0); 
 		assertEquals(30.3,p1.getPrecoVenda());
 		
 		Produto p2 = new Produto();
@@ -64,6 +64,10 @@ class ProdutoTest {
 		p2.setMargemLucro(1.0);              
 		p2.setValorImpostos(10.0);
 		assertNotSame(31,p1.getPrecoVenda());
+		
+		Produto p3 = new Produto();
+		p3.setPrecoVenda(10, 0.5, 12.0);
+		assertEquals(22.5, p3.getPrecoVenda());
 		
 	}
 

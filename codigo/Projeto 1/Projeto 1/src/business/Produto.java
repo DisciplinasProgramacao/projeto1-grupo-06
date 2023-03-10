@@ -48,6 +48,9 @@ public class Produto {
 	}
 	
 	public void setPrecoVenda(double custo, double lucro, double impostos) {
+		this.precoCusto = custo;
+		this.margemLucro = lucro;
+		this.valorImpostos = impostos;
 		this.precoVenda = precoCusto + margemLucro + valorImpostos;
 	}
 	
