@@ -23,7 +23,7 @@ class ProdutoTest {
 		
 	}
 	
-	@Test
+    	@Test
     	void testMargemLucro() {
         Produto p1 = new Produto();
         p1.setPrecoCusto(20);
@@ -33,8 +33,8 @@ class ProdutoTest {
         Produto p2 = new Produto();
         p2.setPrecoCusto(30);
         p2.setMargemLucro(1.5);
-        assertNotEquals(1.5, p2.getMargemLucro(), 0.001);
-        }
+        assertEquals(0.0, p2.getMargemLucro(), 0.001);
+    	}
 	
 	@Test
     	void testValorImpostos() {
