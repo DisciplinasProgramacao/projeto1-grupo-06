@@ -40,7 +40,10 @@ public class Produto {
 	}
 	
 	public void setValorImpostos(double valorImpostos) {
-        this.valorImpostos = valorImpostos;
+	        double valorMargemLucro = precoCusto * margemLucro;
+	        double valorBaseCalculo = precoCusto + valorMargemLucro;
+	        double ValorImpostos = valorBaseCalculo * 0.18;
+	        this.valorImpostos = ValorImpostos;
     	}
 	
 	public double getValorImpostos() {
