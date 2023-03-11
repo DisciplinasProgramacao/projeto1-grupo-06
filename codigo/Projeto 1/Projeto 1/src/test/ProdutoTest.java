@@ -32,8 +32,8 @@ class ProdutoTest {
 
         Produto p2 = new Produto();
         p2.setPrecoCusto(30);
-        p2.setMargemLucro(1.5);
-        assertEquals(0.0, p2.getMargemLucro(), 0.001);
+        p2.setMargemLucro(1.5); // margem de lucro inválida
+        assertEquals(0.0, p2.getMargemLucro(), 0.001); // margem de lucro deve ser igual a zero
     	}
 	
 	@Test
