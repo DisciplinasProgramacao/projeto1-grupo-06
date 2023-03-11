@@ -47,11 +47,8 @@ public class Produto {
 		return valorImpostos;
 	}
 	
-	public void setPrecoVenda(double custo, double lucro, double impostos) {
-		this.precoCusto = custo;
-		this.margemLucro = lucro;
-		this.valorImpostos = impostos;
-		this.precoVenda = precoCusto + margemLucro + valorImpostos;
+	public void setPrecoVenda() {
+		this.precoVenda = precoCusto + (precoCusto*margemLucro) + valorImpostos;
 	}
 	
 	public Produto(String descricao, double precoCusto, double margemLucro, double valorImpostos) {
@@ -66,8 +63,8 @@ public class Produto {
 	public Produto(){
 		descricao = "Descricao_Padrao";
 		precoCusto = 0.01f;
-		valorImpostos = 10.0;
-		margemLucro = 100;
+		valorImpostos = 0.0;
+		margemLucro = 0.0;
 		
 	}
 }
