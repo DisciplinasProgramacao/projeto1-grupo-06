@@ -53,7 +53,7 @@ public class Produto {
 	
 
 	public void setValoresArrecadados() {
-		this.valoresArrecadados = valoresArrecadados;
+		this.valoresArrecadados = precoVenda - precoCusto;
 	}
 	
 	public double getValoresArrecadados() {
