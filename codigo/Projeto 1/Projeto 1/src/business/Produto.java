@@ -7,7 +7,9 @@ public class Produto {
 	private double precoVenda;
 	private double margemLucro;
 	private double valorImpostos;
+	private double valoresArrecadados;
 	
+
 	public String getDescricao() {
 		return descricao;
 	}
@@ -47,6 +49,15 @@ public class Produto {
 	
 	public double getValorImpostos() {
 		return valorImpostos;
+	}
+	
+
+	public void setValoresArrecadados() {
+		this.valoresArrecadados = valoresArrecadados;
+	}
+	
+	public double getValoresArrecadados() {
+		return valoresArrecadados;
 	}
 	
 	public void setPrecoVenda() {
