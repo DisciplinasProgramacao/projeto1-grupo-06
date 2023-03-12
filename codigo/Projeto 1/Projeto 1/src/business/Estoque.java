@@ -13,6 +13,13 @@ public class Estoque {
 		return total;
 	}
 	
+	public float valorEmEstoque() {
+		float valor = 0;
+		for (int i = 0; i < numProdutos; i++)
+			valor += produtos[i].getQuantidadeAtual() * produtos[i].getPrecoCusto();
+		return valor;
+	}
+	
 	
 	public Estoque() {
 		produtos = new Produto[MAX_PRODUTOS];
