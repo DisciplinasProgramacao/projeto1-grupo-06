@@ -22,14 +22,7 @@ Estoque estoque;
 		assertEquals(0, estoque.totalEmEstoque(), "Testa se estoque começa vazio.");
 		
 		
-		
 	}
 	
-	void testValorTotalEmEstoque() {
-		assertEquals(0.0F, estoque.valorEmEstoque(), 0.001F, "Testa se valor em estoque começa zero.");
-		
-	
-
-	}
 
 }

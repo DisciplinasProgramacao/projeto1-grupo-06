@@ -6,6 +6,14 @@ public class Estoque {
 	private Produto[] produtos;
 	private int numProdutos;
 	
+	public int totalEmEstoque() {
+		int total = 0;
+		for (int i = 0; i < numProdutos; i++)
+			total += produtos[i].getQuantidadeAtual();
+		return total;
+	}
+	
+	
 	public Estoque() {
 		produtos = new Produto[MAX_PRODUTOS];
 		numProdutos = 0;
