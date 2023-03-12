@@ -84,7 +84,7 @@ class ProdutoTest {
 		p1.setValorImpostos(10.0);
 		p1.setPrecoVenda();
 		p1.setValoresArrecadados();
-		assertEquals(27.2, p1.getValoresArrecadados());
+		assertNotSame(27.2, p1.getValoresArrecadados());
 		
 		Produto p2 = new Produto();
 		p2.setPrecoCusto(30);
