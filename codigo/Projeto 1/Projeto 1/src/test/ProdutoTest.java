@@ -76,4 +76,23 @@ class ProdutoTest {
 	    assertEquals(35.4, p3.getPrecoVenda());
 	}
 
+	@Test 
+	void testValoresArrecadados() {
+		Produto p1 = new Produto();
+		p1.setPrecoCusto(20);
+		p1.setMargemLucro(1.0);              
+		p1.setValorImpostos(10.0);
+		p1.setPrecoVenda();
+		p1.setValoresArrecadados();
+		assertEquals(27.2, p1.getValoresArrecadados());
+		
+		Produto p2 = new Produto();
+		p2.setPrecoCusto(30);
+		p2.setMargemLucro(0.7);              
+		p2.setValorImpostos(10.0);
+		p2.setPrecoVenda();
+		p2.setValoresArrecadados();
+		assertEquals(30.18, p2.getValoresArrecadados());
+
+	}
 }
