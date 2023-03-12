@@ -24,5 +24,12 @@ Estoque estoque;
 		
 	}
 	
+	void testValorTotalEmEstoque() {
+		assertEquals(0.0F, estoque.valorEmEstoque(), 0.001F, "Testa se valor em estoque começa zero.");
+		
+	
+
+	}
+	
 
 }
