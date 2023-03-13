@@ -20,13 +20,29 @@ public class Aplicacao {
 	      System.out.println("6 - Sair");
 
 	      int opcao = scanner.nextInt();
-	      if (opcao == 1) {
+		    
+	     if (opcao == 1) {
             System.out.println("Digite o nome do produto a ser vendido:");
             String nome = scanner.next();
             System.out.println("Digite a quantidade a ser vendida:");
             int quantidade = scanner.nextInt();
             estoque.retirarDoEstoque(nome, quantidade);
-            }    
+            }
+
+          else if (opcao == 2) {
+          
+          } 
+
+          else if (opcao == 3) {
+            System.out.println("Digite o nome do produto a ser consultado:");
+            String nome = scanner.next();
+            Produto produto = estoque.buscarProduto(nome);
+            if (produto != null) {
+              System.out.println(produto.toString());
+            } else {
+              System.out.println("Produto não encontrado.");
+            }
+          } 
 		else if (opcao == 6) {
 	        break;
 	      } 
