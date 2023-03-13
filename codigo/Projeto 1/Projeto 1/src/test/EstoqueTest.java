@@ -72,6 +72,27 @@ Estoque estoque;
         assertEquals(11, p1.getQuantidadeAtual());
     	}
 
+	@Test
+    	public void testRetirarDoEstoque() {
+        Estoque estoque = new Estoque();
+        Produto p1 = new Produto();
+        p1.setDescricao("Produto 1");
+        p1.setQuantidadeAtual(5);
+        estoque.reporEstoque(p1, 5);
 
+        estoque.retirarDoEstoque("Produto 2", 5);
+        assertEquals(5, p1.getQuantidadeAtual());
+
+        estoque.retirarDoEstoque("Produto 1", 0);
+        assertEquals(5, p1.getQuantidadeAtual());
+
+        estoque.retirarDoEstoque("Produto 1", -1);
+        assertEquals(5, p1.getQuantidadeAtual());
+
+        estoque.retirarDoEstoque("Produto 1", 6);
+        assertEquals(5, p1.getQuantidadeAtual());
+
+        estoque.retirarDoEstoque(null, 0);
+	}
 	
 }
