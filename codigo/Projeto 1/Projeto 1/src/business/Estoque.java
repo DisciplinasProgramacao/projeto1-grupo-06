@@ -1,10 +1,12 @@
 package business;
 
+
 public class Estoque {
 
 	private static final int MAX_PRODUTOS = 1000000;
 	private Produto[] produtos;
 	private int numProdutos;
+	double valorGastoReposicao = 0;
 	
 	public int totalEmEstoque() {
 		int total = 0;
@@ -59,7 +61,7 @@ public class Estoque {
 	    double quantidadeAtual = produto.getQuantidadeAtual();
 	    quantidadeAtual += quantidade;
 	    produto.setQuantidadeAtual(quantidadeAtual);
-
+	    
 
 	    //verifica se o estoque está abaixo do mínimo
 	    if (produto.isEstoqueBaixo()) {
@@ -68,6 +70,7 @@ public class Estoque {
 	    }
 
 	    System.out.println("O estoque foi atualizado com sucesso!");
+	    this.valorGastoReposicao = this.valorGastoReposicao + (produto.getPrecoCusto()* quantidade) ;
 	}
 
 	
@@ -92,6 +95,7 @@ public class Estoque {
 	    System.out.println(quantidade + " unidades de " + descricaoProduto + " foram retiradas do estoque.");
 	}
 	
+	
 	//método para buscar produtos caso seja necessário fazer uma reposição ou retirada
 	public Produto buscarProduto(String descricaoProduto) {
 	    for (int i = 0; i < numProdutos; i++) {
@@ -102,5 +106,7 @@ public class Estoque {
 	    }
 	    return null;
 	}
+	
+
 
 }
