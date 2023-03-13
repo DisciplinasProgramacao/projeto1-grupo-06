@@ -92,4 +92,15 @@ public class Estoque {
 	    System.out.println(quantidade + " unidades de " + descricaoProduto + " foram retiradas do estoque.");
 	}
 	
+	//método para buscar produtos caso seja necessário fazer uma reposição ou retirada
+	public Produto buscarProduto(String descricaoProduto) {
+	    for (int i = 0; i < numProdutos; i++) {
+	        Produto produto = produtos[i];
+	        if (produto.getDescricao().equals(descricaoProduto)) {
+	            return produto;
+	        }
+	    }
+	    return null;
+	}
+
 }
