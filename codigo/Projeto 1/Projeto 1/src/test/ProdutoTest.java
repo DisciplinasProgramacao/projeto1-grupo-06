@@ -84,7 +84,7 @@ class ProdutoTest {
 		p1.setValorImpostos(10.0);
 		p1.setPrecoVenda();
 		p1.setValoresArrecadados();
-		assertNotSame(27.2, p1.getValoresArrecadados());
+		assertEquals(27.2, p1.getValoresArrecadados());
 		
 		Produto p2 = new Produto();
 		p2.setPrecoCusto(30);
@@ -95,4 +95,25 @@ class ProdutoTest {
 		assertEquals(30.18, p2.getValoresArrecadados());
 
 	}
+	@Test
+     void testGetQuantidadeAtual() {
+		Produto produto = new Produto();
+        produto.setQuantidadeAtual(10);
+        assertEquals(10, produto.getQuantidadeAtual());
+    }
+
+    @Test
+    public void testGetQuantidadeMinima() {
+    	Produto produto = new Produto();
+    	produto.setQuantidadeMinima(5);
+        assertEquals(5, produto.getQuantidadeMinima());
+    }
+
+    @Test
+    void testEstoqueBaixo() {
+		Produto produto = new Produto();
+		produto.setQuantidadeAtual(2);
+		produto.setQuantidadeMinima(5);
+        assertTrue(produto.estoqueBaixo());
+    }
 }
