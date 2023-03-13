@@ -24,6 +24,7 @@ Estoque estoque;
 		
 	}
 	
+	@Test
 	void testValorTotalEmEstoque() {
 		assertEquals(0.0F, estoque.valorEmEstoque(), 0.001F, "Testa se valor em estoque começa zero.");
 		
@@ -32,4 +33,16 @@ Estoque estoque;
 	}
 	
 
+	@Test
+    	public void testProdutosComEstoqueBaixo() {
+        Estoque estoque = new Estoque();
+        Produto p1 = new Produto();
+        Produto p2 = new Produto();
+        estoque.reporEstoque(p1, 4);
+        estoque.reporEstoque(p2, 9);
+        estoque.produtosComEstoqueBaixo();
+        p2.setQuantidadeAtual(8);
+        estoque.produtosComEstoqueBaixo();
+    	}
+	
 }
