@@ -70,4 +70,26 @@ public class Estoque {
 	    System.out.println("O estoque foi atualizado com sucesso!");
 	}
 
+	
+
+	//método para retirar do estoque
+	public void retirarDoEstoque(String descricaoProduto, int quantidade) {
+	    Produto produto = buscarProduto(descricaoProduto);
+	    //verificar se produto está cadastrado
+	    if (produto == null) {
+	        System.out.println("Produto não cadastrado.");
+	        return;
+	    }
+	    if (quantidade <= 0) {
+	        System.out.println("Quantidade inválida.");
+	        return;
+	    }
+	    if (produto.getQuantidadeAtual() < quantidade) {
+	        System.out.println("Quantidade insuficiente em estoque.");
+	        return;
+	    }
+	    produto.setQuantidadeAtual(produto.getQuantidadeAtual() - quantidade);
+	    System.out.println(quantidade + " unidades de " + descricaoProduto + " foram retiradas do estoque.");
+	}
+	
 }
