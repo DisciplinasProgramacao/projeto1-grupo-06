@@ -43,6 +43,10 @@ public class Aplicacao {
               System.out.println("Produto não encontrado.");
             }
           } 
+		else if (opcao == 4) {
+	        System.out.println("A quantidade de produtos que constam no estoque é: " + estoque.totalEmEstoque());
+	        System.out.println("O valor total do estoque atual é: "+estoque.valorEmEstoque()); 
+	      } 
 		else if (opcao == 6) {
 	        break;
 	      } 
