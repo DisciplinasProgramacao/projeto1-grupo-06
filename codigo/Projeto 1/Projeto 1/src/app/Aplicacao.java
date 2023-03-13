@@ -26,8 +26,7 @@ public class Aplicacao {
             System.out.println("Digite a quantidade a ser vendida:");
             int quantidade = scanner.nextInt();
             estoque.retirarDoEstoque(nome, quantidade);
-            }
-		    
+            }    
 		else if (opcao == 6) {
 	        break;
 	      } 
