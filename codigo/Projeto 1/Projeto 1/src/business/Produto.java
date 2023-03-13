@@ -1,14 +1,15 @@
 package business;
 
 public class Produto {
-
 	private String descricao;
 	private double precoCusto;
 	private double precoVenda;
 	private double margemLucro;
 	private double valorImpostos;
 	private double valoresArrecadados;
-	
+	private double quantidadeAtual;
+	private double quantidadeMinima;
+	private boolean estoqueBaixo;
 
 	public String getDescricao() {
 		return descricao;
@@ -80,5 +81,33 @@ public class Produto {
 		margemLucro = 0.0;
 		
 	}
-}
+	
+	public double getQuantidadeAtual() {
+        return quantidadeAtual;
+    }
 
+    public void setQuantidadeAtual(double quantidadeAtual) {
+        this.quantidadeAtual = quantidadeAtual;
+    }
+
+    public double getQuantidadeMinima() {
+        return quantidadeMinima;
+    }
+    
+    public void setQuantidadeMinima(double quantidadeMinima){
+        this.quantidadeMinima = quantidadeMinima;
+    }
+    
+    public boolean isEstoqueBaixo() {
+		return estoqueBaixo;
+	}
+
+	public void setEstoqueBaixo(boolean estoqueBaixo) {
+		this.estoqueBaixo = estoqueBaixo;
+	}
+	
+    public boolean estoqueBaixo() {
+        return quantidadeAtual < quantidadeMinima;
+    }
+
+}
