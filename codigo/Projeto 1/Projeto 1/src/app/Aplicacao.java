@@ -27,6 +27,7 @@ public class Aplicacao {
             int quantidade = scanner.nextInt();
             estoque.retirarDoEstoque(nome, quantidade);
             }
+		    
 		else if (opcao == 6) {
 	        break;
 	      } 
