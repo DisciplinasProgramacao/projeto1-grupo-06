@@ -21,7 +21,12 @@ public class Aplicacao {
 
 	      int opcao = scanner.nextInt();
 	      if (opcao == 1) {
-	      }
+            System.out.println("Digite o nome do produto a ser vendido:");
+            String nome = scanner.next();
+            System.out.println("Digite a quantidade a ser vendida:");
+            int quantidade = scanner.nextInt();
+            estoque.retirarDoEstoque(nome, quantidade);
+            }
 		else if (opcao == 6) {
 	        break;
 	      } 
