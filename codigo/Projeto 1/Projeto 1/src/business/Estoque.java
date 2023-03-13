@@ -26,4 +26,17 @@ public class Estoque {
 		numProdutos = 0;
 		
 	}
+	
+		
+	//método que verifica se o estoque atual dos produtos é maior que a quantidade mínima
+	public void produtosComEstoqueBaixo() {
+	    for (int i = 0; i < numProdutos; i++) {
+	        Produto produto = produtos[i];
+	        if (produto.getQuantidadeAtual() < produto.getQuantidadeMinima()) {
+	            System.out.println("Produto com estoque abaixo do mínimo: " + produto.getDescricao());
+	        }
+	    }
+	}
+
+	
 }
