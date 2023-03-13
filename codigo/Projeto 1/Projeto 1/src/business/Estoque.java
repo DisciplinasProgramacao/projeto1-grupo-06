@@ -38,5 +38,36 @@ public class Estoque {
 	    }
 	}
 
-	
+	//método para repor estoque, considerando limite mínimo e máximo e se o produto está cadastrado
+	public void reporEstoque(Produto produto, double quantidade) {
+	    //encontra a posição do produto no array
+	    int posicao = -1;
+	    for (int i = 0; i < numProdutos; i++) {
+	        if (produtos[i] == produto) {
+	            posicao = i;
+	            break;
+	        }
+	    }
+
+	    //verifica se o produto está cadastrado
+	    if (posicao == -1) {
+	        System.out.println("Produto não encontrado!");
+	        return;
+	    }
+
+	    //atualiza a quantidade atual do produto
+	    double quantidadeAtual = produto.getQuantidadeAtual();
+	    quantidadeAtual += quantidade;
+	    produto.setQuantidadeAtual(quantidadeAtual);
+
+
+	    //verifica se o estoque está abaixo do mínimo
+	    if (produto.isEstoqueBaixo()) {
+	        System.out.println("O estoque está abaixo do mínimo!");
+	        produto.setEstoqueBaixo(true);
+	    }
+
+	    System.out.println("O estoque foi atualizado com sucesso!");
+	}
+
 }
