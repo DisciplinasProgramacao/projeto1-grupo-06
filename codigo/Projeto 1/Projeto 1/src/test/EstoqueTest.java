@@ -45,4 +45,33 @@ Estoque estoque;
         estoque.produtosComEstoqueBaixo();
     	}
 	
+	
+
+    	@Test
+    	public void testReporEstoque() {
+        Produto p1 = new Produto();
+        p1.setDescricao("Produto 1");
+        p1.setQuantidadeAtual(5);
+        p1.setQuantidadeMinima(10);
+        assertEquals(5, p1.getQuantidadeAtual());
+
+        estoque.reporEstoque(p1, 5);
+        p1.setQuantidadeAtual(10);
+        assertEquals(10, p1.getQuantidadeAtual());
+
+        estoque.reporEstoque(p1, 1);
+        p1.setQuantidadeAtual(11);
+        assertEquals(11, p1.getQuantidadeAtual());
+
+        estoque.reporEstoque(p1, 0);
+        p1.setQuantidadeAtual(11);
+        assertEquals(11, p1.getQuantidadeAtual());
+
+        estoque.reporEstoque(p1, -1);
+        p1.setQuantidadeAtual(11);
+        assertEquals(11, p1.getQuantidadeAtual());
+    	}
+
+
+	
 }
