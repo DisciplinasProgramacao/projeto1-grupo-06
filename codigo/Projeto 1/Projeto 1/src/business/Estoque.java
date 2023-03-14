@@ -6,7 +6,13 @@ public class Estoque {
 	private static final int MAX_PRODUTOS = 1000000;
 	private Produto[] produtos;
 	private int numProdutos;
-	double valorGastoReposicao = 0;
+	public double valorGastoReposicao = 0;
+	
+	public void add(Produto produto) {
+		if(numProdutos < MAX_PRODUTOS) {
+			produtos[numProdutos++] = produto;
+		}
+	}
 	
 	public int totalEmEstoque() {
 		int total = 0;
@@ -26,7 +32,7 @@ public class Estoque {
 	public Estoque() {
 		produtos = new Produto[MAX_PRODUTOS];
 		numProdutos = 0;
-		
+		valorGastoReposicao = 0;
 	}
 	
 		
@@ -61,15 +67,14 @@ public class Estoque {
 	    double quantidadeAtual = produto.getQuantidadeAtual();
 	    quantidadeAtual += quantidade;
 	    produto.setQuantidadeAtual(quantidadeAtual);
-	    
+	    System.out.println("O estoque foi atualizado com sucesso!");
 
 	    //verifica se o estoque está abaixo do mínimo
 	    if (produto.isEstoqueBaixo()) {
 	        System.out.println("O estoque está abaixo do mínimo!");
 	        produto.setEstoqueBaixo(true);
 	    }
-
-	    System.out.println("O estoque foi atualizado com sucesso!");
+ 
 	    this.valorGastoReposicao = this.valorGastoReposicao + (produto.getPrecoCusto()* quantidade) ;
 	}
 
