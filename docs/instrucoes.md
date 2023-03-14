@@ -1,3 +1,3 @@
 # Instruções de uso
 
-Coloque neste arquivo qualquer instrução que julgar pertinente para a execução correta do sistema: arquivos de configuração, arquivos de dados, possíveis dados de teste etc.
+- A execução do programa resulta na aparição de um menu com opções interativas, como por exemplo, mostrar a descrição de um produto ou realizar a venda de uma quantidade determinada de um produto do estoque.
