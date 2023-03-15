@@ -47,8 +47,10 @@ public class Aplicacao {
 	          System.out.println("Produto Encontrado");
 	          System.out.println("O nome do produto é: " + produto.getDescricao());
 	          System.out.println("O preço de custo do produto é: " + produto.getPrecoCusto());
+	          System.out.println("O preço de venda do produto é: " + produto.getPrecoVenda());
 	          System.out.println("O valor dos impostos é: " + produto.getValorImpostos());
 	          System.out.println("A margem de lucro é: " + produto.getMargemLucro());
+	          
 	          
 	        } else {
 	          System.out.println("Produto não encontrado.");
@@ -62,14 +64,15 @@ public class Aplicacao {
 	      
 	      else if (opcao == 5) {
 	        double valorEstoque = estoque.valorEmEstoque();
-	        double valorVendido = estoque.calcularValorVendido();
 	        System.out.println("Valor do estoque atual: R$" + valorEstoque);
-	        System.out.println("Valor vendido: R$" + valorVendido);
+	        System.out.println("Valor vendido: R$" + estoque.calcularValorVendido);
 	        System.out.println("Valor gasto em pedidos de reposição: R$" + estoque.valorGastoReposicao);
 	      } 
 	      
 	      else if (opcao == 6) {
 	        estoque.add(new Produto("Leite", 10, 0.5, 0.6));
+	        estoque.add(new Produto("Caneta", 10, 0.5, 0.6));
+	        estoque.add(new Produto("Lápis", 10, 0.5, 0.6));
 	        System.out.println("Produto Cadastrado");
 	      } 
 	      
