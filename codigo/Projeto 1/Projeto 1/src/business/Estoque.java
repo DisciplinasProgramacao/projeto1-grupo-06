@@ -7,6 +7,7 @@ public class Estoque {
 	private Produto[] produtos;
 	private int numProdutos;
 	public double valorGastoReposicao = 0;
+	public double calcularValorVendido = 0;
 	
 	public void add(Produto produto) {
 		if(numProdutos < MAX_PRODUTOS) {
@@ -33,6 +34,7 @@ public class Estoque {
 		produtos = new Produto[MAX_PRODUTOS];
 		numProdutos = 0;
 		valorGastoReposicao = 0;
+		calcularValorVendido = 0;
 	}
 	
 		
@@ -96,8 +98,11 @@ public class Estoque {
 	        System.out.println("Quantidade insuficiente em estoque.");
 	        return;
 	    }
+	    double quantidadeTotal = 0;
+	    produto.setQuantidadeAtual(quantidadeTotal = produto.getQuantidadeAtual());
 	    produto.setQuantidadeAtual(produto.getQuantidadeAtual() - quantidade);
 	    System.out.println(quantidade + " unidades de " + descricaoProduto + " foram retiradas do estoque.");
+	    this.calcularValorVendido = this.calcularValorVendido + (produto.getPrecoVenda()* (quantidadeTotal - produto.getQuantidadeAtual()));
 	}
 	
 	
