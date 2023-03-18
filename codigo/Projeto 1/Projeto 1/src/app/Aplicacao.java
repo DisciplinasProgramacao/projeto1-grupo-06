@@ -44,6 +44,7 @@ public class Aplicacao {
 	        String nome = scanner.next();
 	        Produto produto = estoque.buscarProduto(nome);
 	        if (produto != null) {
+	        	produto.setPrecoVenda();
 	          System.out.println("Produto Encontrado");
 	          System.out.println("O nome do produto é: " + produto.getDescricao());
 	          System.out.println("O preço de custo do produto é: " + produto.getPrecoCusto());
